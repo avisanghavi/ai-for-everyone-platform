@@ -33,41 +33,44 @@ const FeaturesSection = () => {
   ];
 
   return (
-    <section id="features" className="py-20 bg-muted/30">
-      <div className="container mx-auto px-6">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Built for <span className="text-transparent bg-clip-text bg-gradient-accent">Everyone</span>
+    <section id="features" className="py-32 bg-gradient-to-b from-background to-muted/30">
+      <div className="container mx-auto px-8">
+        <div className="text-center mb-20 animate-fade-up">
+          <h2 className="text-5xl lg:text-6xl font-bold text-foreground mb-8 tracking-tight">
+            Built for{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-text">
+              Everyone
+            </span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl lg:text-2xl text-muted-foreground max-w-4xl mx-auto font-light leading-relaxed">
             Whether you're a solo entrepreneur or leading a growing team, our platform adapts to your needs and grows with your ambitions.
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
           {features.map((feature, index) => (
             <div 
               key={feature.title}
-              className="bg-card rounded-xl p-6 border border-border hover:shadow-lg transition-all duration-300 hover:scale-105 group animate-fade-in"
+              className="glass rounded-3xl p-8 shadow-premium hover:shadow-premium-lg transition-all duration-500 hover:scale-[1.02] group animate-slide-up"
               style={{ animationDelay: `${index * 0.1}s` }}
             >
-              <div className="text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
+              <div className="text-5xl mb-6 group-hover:scale-110 transition-transform duration-300">
                 {feature.icon}
               </div>
-              <h3 className="text-xl font-bold text-foreground mb-3">
+              <h3 className="text-2xl font-bold text-foreground mb-4 tracking-tight">
                 {feature.title}
               </h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <p className="text-muted-foreground leading-relaxed font-light text-lg">
                 {feature.description}
               </p>
             </div>
           ))}
         </div>
 
-        <div className="text-center mt-16">
-          <div className="inline-flex items-center space-x-2 bg-accent/10 border border-accent/20 rounded-full px-6 py-3 mb-6">
-            <div className="w-2 h-2 bg-accent rounded-full animate-pulse"></div>
-            <span className="text-accent font-medium">Trusted by 10,000+ innovators worldwide</span>
+        <div className="text-center mt-20 animate-fade-up" style={{ animationDelay: '0.8s' }}>
+          <div className="inline-flex items-center space-x-3 glass rounded-full px-8 py-4 shadow-premium">
+            <div className="w-2 h-2 bg-primary rounded-full animate-pulse"></div>
+            <span className="text-primary font-semibold tracking-wide">Trusted by 10,000+ innovators worldwide</span>
           </div>
         </div>
       </div>
