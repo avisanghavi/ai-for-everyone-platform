@@ -70,44 +70,26 @@ export default {
 			borderRadius: {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
-				sm: 'calc(var(--radius) - 4px)',
-				'2xl': '20px',
-				'3xl': '24px'
+				sm: 'calc(var(--radius) - 4px)'
 			},
 			keyframes: {
 				'accordion-down': {
-					from: { height: '0' },
-					to: { height: 'var(--radix-accordion-content-height)' }
+					from: {
+						height: '0'
+					},
+					to: {
+						height: 'var(--radix-accordion-content-height)'
+					}
 				},
 				'accordion-up': {
-					from: { height: 'var(--radix-accordion-content-height)' },
-					to: { height: '0' }
-				},
-				'fade-up': {
-					'0%': {
-						opacity: '0',
-						transform: 'translateY(30px)'
+					from: {
+						height: 'var(--radix-accordion-content-height)'
 					},
-					'100%': {
-						opacity: '1',
-						transform: 'translateY(0)'
+					to: {
+						height: '0'
 					}
 				},
 				'fade-in': {
-					'0%': { opacity: '0' },
-					'100%': { opacity: '1' }
-				},
-				'scale-in': {
-					'0%': {
-						opacity: '0',
-						transform: 'scale(0.95)'
-					},
-					'100%': {
-						opacity: '1',
-						transform: 'scale(1)'
-					}
-				},
-				'slide-up': {
 					'0%': {
 						opacity: '0',
 						transform: 'translateY(20px)'
@@ -116,24 +98,35 @@ export default {
 						opacity: '1',
 						transform: 'translateY(0)'
 					}
+				},
+				'float': {
+					'0%, 100%': {
+						transform: 'translateY(0px)'
+					},
+					'50%': {
+						transform: 'translateY(-10px)'
+					}
+				},
+				'glow': {
+					'0%, 100%': {
+						boxShadow: '0 0 20px hsl(var(--hero-accent) / 0.3)'
+					},
+					'50%': {
+						boxShadow: '0 0 40px hsl(var(--hero-accent) / 0.6)'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
 				'accordion-up': 'accordion-up 0.2s ease-out',
-				'fade-up': 'fade-up 0.8s ease-out',
 				'fade-in': 'fade-in 0.6s ease-out',
-				'scale-in': 'scale-in 0.5s ease-out',
-				'slide-up': 'slide-up 0.6s ease-out'
+				'float': 'float 4s ease-in-out infinite',
+				'glow': 'glow 3s ease-in-out infinite'
 			},
 			backgroundImage: {
-				'gradient-premium': 'var(--gradient-premium)',
-				'gradient-glass': 'var(--gradient-glass)',
-				'gradient-text': 'var(--gradient-text)',
-				'hero-bg': 'var(--hero-bg)'
-			},
-			fontFamily: {
-				'sans': ['var(--font-premium)', 'system-ui', 'sans-serif']
+				'gradient-primary': 'var(--gradient-primary)',
+				'gradient-accent': 'var(--gradient-accent)',
+				'gradient-subtle': 'var(--gradient-subtle)'
 			}
 		}
 	},
